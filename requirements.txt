@@ -1,2 +1,2 @@
-requests
 slack_bolt
+python_dotenv
