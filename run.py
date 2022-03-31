@@ -86,10 +86,11 @@ emojis = [
 ]
 
 for i in range(999 * 999 * 99 * 99):
+  emoji = emojis[i % len(emojis)]
   try:
-    emoji = emojis[i % len(emojis)]
     app.client.users_profile_set(profile={"status_emoji": ":" + emoji + ":"})
   except Exception as e:
+    print(emoji)
     print(e)
   sleep(7)
 
