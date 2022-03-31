@@ -9,13 +9,13 @@ app = App(token=os.getenv("SLACK_BOT_TOKEN"))
 
 emojis = [
   "cool",
-  "comet"
+  "comet",
   "cookie",
   "computer"
   "collision",
   "cactus",
   "wolf",
-  "cold_face"
+  "cold_face",
   "100",
   "brain",
   "koala",
@@ -35,25 +35,61 @@ emojis = [
   "mag",
   "briefcase",
   "warning",
-  "o"
+  "o",
   "red_circle",
-  "large_blue_circle",
-  "large_orange_diamond",
-  "large_blue_diamond",
-  "large_orange_circle",
-  "large_blue_square",
-  "large_red_square",
-  "large_red_triangle_down",
-  "large_red_triangle",
+  "fuelpump",
+  "scissors",
+  "sparkles",
+  "sparkling_heart",
+  "star",
+  "star2",
+  "dizzy",
+  "boom",
+  "zzz",
+  "alien",
+  "satellite",
+  "satellite_orbital",
+  "scorpius",
+  "ophiuchus",
+  "aries",
+  "taurus",
+  "gemini",
+  "cancer",
+  "leo",
+  "virgo",
+  "libra",
+  "scorpius",
+  "sagittarius",
+  "capricorn",
+  "aquarius",
+  "pisces",
+  "ophiuchus",
+  "six_pointed_star",
+  "negative_squared_cross_mark",
+  "white_check_mark",
+  "eight_pointed_black_star",
+  "eight_spoked_asterisk",
+  "sparkle",
+  "question",
+  "grey_question",
+  "grey_exclamation",
+  "exclamation",
+  "heavy_exclamation_mark",
+  "heavy_heart_exclamation_mark_ornament",
+  "heart",
+  "heavy_plus_sign",
+  "heavy_minus_sign",
+  "heavy_division_sign",
+  "heavy_multiplication_x",
+  "heavy_dollar_sign",
+  "currency_exchange",
 ]
 
-# infinite times
-for i in range(40):
-  # trycatch
+for i in range(999 * 999 * 99 * 99):
   try:
     emoji = emojis[i % len(emojis)]
     app.client.users_profile_set(profile={"status_emoji": ":" + emoji + ":"})
   except Exception as e:
     print(e)
-  sleep(10)
+  sleep(7)
 
